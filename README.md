@@ -1,7 +1,7 @@
 # Spotify Top 50 songs of 2019 data visualization
 
 ## Introduction
-"Top 50 Spotify Songs - 2019" is a CSV database from Kaggle. It contains several variables, such as :
+"Top 50 Spotify Songs - 2019" is a CSV database from Kaggle. It contains several variables :
 Track.Name : Name of the Track
 Artist.Name : Name of the Artist
 Genre : the genre of the track
@@ -17,7 +17,7 @@ Speechiness. : The higher the value the more spoken word the song contains.
 Popularity : The higher the value the more popular the song is.
 
 ## Exploring the data
-Usinge R, let us start by plotting t
+Using R, let us start by plotting several
 
 ## Release History
 
