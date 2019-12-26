@@ -35,7 +35,7 @@ corrplot(mtCor, method = "number", type = "upper")
 We obtain the following result :
 ![correlogram](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/correlo.png)
 
-We can clearly see a high correlation between Loudness and Energy, but also with Speechiness and Beats per Minute.
+We can clearly see a relatively high correlation between Loudness and Energy (0.67), but also with Speechiness and Beats per Minute(0.56).
 
 ### Plotting the correlated variables
 Since we see where there is a correlation between some variables, let us plot them, and adding the genre of each song :
