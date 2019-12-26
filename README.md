@@ -39,7 +39,8 @@ We obtain the following result :
 We can clearly see a relatively high correlation between Loudness and Energy (0.67), but also with Speechiness and Beats per Minute(0.56).
 
 ### Plotting the correlated variables
-Since we see where there is a correlation between some variables, let us plot them, and adding the genre of each song :
+Since we see there is a correlation between some variables, let us plot them, and highlighting the genre of each song :
+
 ```r
 library(plotly)
 plot_ly(data = data, x = ~Energy, y = ~Loudness..dB.., color= ~Genre, colors = "Set1" )
