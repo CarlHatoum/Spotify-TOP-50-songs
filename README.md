@@ -36,6 +36,16 @@ We obtain the following result :
 ![correlogram](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/top50_correlogram.png)
 
 We can clearly see a high correlation between Loudness and Energy, but also with Speechiness and Beats per Minute.
+
+### Plotting the correlated variables
+Since we see where there is a correlation between some variables, let us plot them, to see if there is a pattern :
+```r
+library(plotly)
+plot_ly(data = data, x = ~Loudness..dB.., y = ~Energy)
+plot_ly(data = data, x = ~Speechiness., y = ~Beats.Per.Minute)
+```
+![energy_loudness](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/energy_loudness.png)
+![speechiness_bpm](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/speechiness_bpm.png)
 ## Release History
 
 * 0.0.1
