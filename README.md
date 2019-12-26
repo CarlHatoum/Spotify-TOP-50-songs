@@ -20,15 +20,15 @@
 Using R, let us start by plotting the correlogram of the different variables :
 
 Loading the data :
-```
+```r
 data <- read.csv("https://raw.githubusercontent.com/CarlHatoum/Spotify-TOP-50-songs/master/top50.csv")
 ```
 Then, selecting only the numerical variables (e.g removing the track name, artist, and the genre)
-```
+```r
 filtered_data = data[,c(5:14)]
 ```
 Finally, we correlate the variables (default method is [Pearson's](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson's_product-moment_coefficient) ), and plotting the correlogram :
-```
+```r
 mtCor <- cor(filtered_data)
 corrplot(mtCor, method = "ellipse", type = "upper", tl.srt = 45)
 ```
