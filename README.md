@@ -16,7 +16,7 @@
 - Speechiness. : The higher the value the more spoken word the song contains.
 - Popularity : The higher the value the more popular the song is.
 
-**Disclaimer** This Notebook is rather a exploratory approach rather than a explainatory.
+**Disclaimer** This Notebook is rather a exploratory approach rather than a explainatory one.
 ## Exploring the data
 Using R, let us start by plotting the correlogram of the different variables :
 
