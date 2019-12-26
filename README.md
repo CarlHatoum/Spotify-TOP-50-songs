@@ -42,8 +42,8 @@ We can clearly see a relatively high correlation between Loudness and Energy (0.
 Since we see where there is a correlation between some variables, let us plot them, and adding the genre of each song :
 ```r
 library(plotly)
-plot_ly(data = data, x = ~Loudness..dB.., y = ~Energy, color= ~Genre, colors = "Set1" )
-plot_ly(data = data, x = ~Speechiness., y = ~Beats.Per.Minute, color= ~Genre, colors = "Set1")
+plot_ly(data = data, x = ~Energy, y = ~Loudness..dB.., color= ~Genre, colors = "Set1" )
+plot_ly(data = data, x = ~Beats.Per.Minute, y = ~Speechiness., color= ~Genre, colors = "Set1")
 ```
 ![energy_loudness](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/energy_loudness.png)
 ![speechiness_bpm](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/speechiness_bpm.png)
