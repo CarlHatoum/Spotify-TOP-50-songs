@@ -27,13 +27,15 @@ Then, selecting only the numerical variables (e.g removing the track name, artis
 ```
 filtered_data = data[,c(5:14)]
 ```
-Finally, correlating the variables, and plotting the correlogram :
+Finally, we correlate the variables (default method is [Pearson's](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson's_product-moment_coefficient) ), and plotting the correlogram :
 ```
 mtCor <- cor(filtered_data)
 corrplot(mtCor, method = "ellipse", type = "upper", tl.srt = 45)
 ```
 We obtain the following result :
 ![correlogram](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/top50_correlogram.png)
+
+We can clearly see a high correlation between Loudness and Energy, but also with Speechiness and Beats per Minute.
 ## Release History
 
 * 0.0.1
