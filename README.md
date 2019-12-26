@@ -18,17 +18,15 @@
 
 **Disclaimer** This Notebook is rather a exploratory approach rather than a explainatory one.
 ## Exploring the data
-Using R, let us start by plotting the correlogram of the different variables :
-
-Loading the data :
+Using R, let us start by loading the data :
 ```r
 data <- read.csv("https://raw.githubusercontent.com/CarlHatoum/Spotify-TOP-50-songs/master/top50.csv")
 ```
-Then, selecting only the numerical variables (e.g removing the track name, artist, and the genre)
+Then, we select only the numerical variables (e.g, removing the track name, artist, and the genre).
 ```r
 filtered_data = data[,c(5:14)]
 ```
-Finally, we correlate the variables (default method is [Pearson's](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson's_product-moment_coefficient) ), and plotting the correlogram :
+Finally, we correlate the variables (default method is [Pearson's](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson's_product-moment_coefficient) ), and plot the correlogram :
 ```r
 mtCor <- cor(filtered_data)
 corrplot(mtCor, method = "number", type = "upper")
@@ -39,7 +37,7 @@ We obtain the following result :
 We can clearly see a relatively high correlation between Loudness and Energy (0.67), but also with Speechiness and Beats per Minute(0.56).
 
 ### Plotting the correlated variables
-Since we see there is a correlation between some variables, let us plot them, and highlighting the genre of each song :
+Since we see there is a correlation between some variables, let us plot them, and highlight the genre of each song :
 
 ```r
 library(plotly)
