@@ -1,4 +1,4 @@
-# Spotify Top 50 songs of 2019 data visualization
+# Spotify Top 50 songs of 2019 data visualization 🎵
 
 ## Introduction
 "Top 50 Spotify Songs - 2019" is a CSV database from [Kaggle](https://www.kaggle.com/leonardopena/top50spotify2019). It contains several variables :
@@ -17,7 +17,7 @@
 - Popularity : The higher the value the more popular the song is.
 
 **Disclaimer** This Notebook is rather a exploratory approach rather than a explainatory one.
-## Exploring the data
+## Exploring the data 📊
 Using R, let us start by loading the data :
 ```r
 data <- read.csv("https://raw.githubusercontent.com/CarlHatoum/Spotify-TOP-50-songs/master/top50.csv")
