@@ -15,7 +15,8 @@
 - Acousticness.. : The higher the value the more acoustic the song is.
 - Speechiness. : The higher the value the more spoken word the song contains.
 - Popularity : The higher the value the more popular the song is.
-**Desclaimer** This Notebook is rather a exploratory approach rather than a explainatory.
+
+**Disclaimer** This Notebook is rather a exploratory approach rather than a explainatory.
 ## Exploring the data
 Using R, let us start by plotting the correlogram of the different variables :
 
