@@ -19,6 +19,21 @@
 ## Exploring the data
 Using R, let us start by plotting the correlogram of the different variables :
 
+Loading the data :
+```
+data <- read.csv("https://raw.githubusercontent.com/CarlHatoum/Spotify-TOP-50-songs/master/top50.csv")
+```
+Then, selecting only the numerical variables (e.g removing the track name, artist, and the genre)
+```
+filtered_data = data[,c(5:14)]
+```
+Finally, correlating the variables, and plotting the correlogram :
+```
+mtCor <- cor(filtered_data)
+corrplot(mtCor, method = "ellipse", type = "upper", tl.srt = 45)
+```
+We obtain the following result :
+![correlogram](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/top50_correlogram.png)
 ## Release History
 
 * 0.0.1
