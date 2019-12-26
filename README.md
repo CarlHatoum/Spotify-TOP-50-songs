@@ -33,7 +33,7 @@ mtCor <- cor(filtered_data)
 corrplot(mtCor, method = "number", type = "upper")
 ```
 We obtain the following result :
-![correlogram](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/correlogram.png)
+![correlogram](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/correlo.png)
 
 We can clearly see a high correlation between Loudness and Energy, but also with Speechiness and Beats per Minute.
 
