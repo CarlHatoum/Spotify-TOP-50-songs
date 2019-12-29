@@ -47,6 +47,7 @@ xlab("") +
 ylab("") +
 facet_wrap(~text)
 ```
+![histogram](https://github.com/CarlHatoum/Spotify-TOP-50-songs/blob/master/images/histogram.png)
 ### Finding potential correlation
 We correlate each pair of the variables (default method is [Pearson's](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson's_product-moment_coefficient) ), and plot the correlogram :
 ```r
