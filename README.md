@@ -23,6 +23,10 @@ Using R, let us start by loading the data and the needed libraries :
 ```r
 library(corrplot)
 library(ggplot2)
+library(tidyverse)
+library(hrbrthemes)
+library(viridis)
+library(forcats)
 data <- read.csv("https://raw.githubusercontent.com/CarlHatoum/Spotify-TOP-50-songs/master/top50.csv")
 ```
 Then, we create a new dataset that contains only the numerical variables (e.g, removing the track name, artist, and the genre).
