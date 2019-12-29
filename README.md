@@ -18,6 +18,7 @@
 
 **Disclaimer** This Notebook is rather a exploratory approach rather than a explainatory one.
 ## Exploring the data 📊
+
 Using R, let us start by loading the data :
 ```r
 data <- read.csv("https://raw.githubusercontent.com/CarlHatoum/Spotify-TOP-50-songs/master/top50.csv")
@@ -26,6 +27,29 @@ Then, we select only the numerical variables (e.g, removing the track name, arti
 ```r
 filtered_data = data[,c(5:14)]
 ```
+### Numerical variables histograms
+Let us display the distribution of each numerical variables with histogram :
+```r
+ filtered_data <- filtered_data %>%
++   gather(key="text", value="value") %>%
++   mutate(text = gsub("\\.", " ",text)) %>%
++   mutate(value = round(as.numeric(value),0))
+```
+Plotting :
+```r
+p <- filtered_data %>%
+mutate(text = fct_reorder(text, value)) %>%
+ggplot( aes(x=value, color=text, fill=text)) +
+geom_histogram(alpha=0.6, binwidth = 5) +
+scale_fill_viridis(discrete=TRUE) +
+scale_color_viridis(discrete=TRUE) +
+theme_ipsum() +
+theme(legend.position="none", panel.spacing = unit(0.1, "lines"), strip.text.x = element_text(size = 8)) +
+xlab("") +
+ylab("") +
+facet_wrap(~text)
+```
+
 Finally, we correlate the variables (default method is [Pearson's](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson's_product-moment_coefficient) ), and plot the correlogram :
 ```r
 mtCor <- cor(filtered_data)
