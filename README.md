@@ -49,8 +49,8 @@ xlab("") +
 ylab("") +
 facet_wrap(~text)
 ```
-
-Finally, we correlate the variables (default method is [Pearson's](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson's_product-moment_coefficient) ), and plot the correlogram :
+### Finding potential correlation
+We correlate each pair of the variables (default method is [Pearson's](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson's_product-moment_coefficient) ), and plot the correlogram :
 ```r
 mtCor <- cor(filtered_data)
 corrplot(mtCor, method = "number", type = "upper")
