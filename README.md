@@ -19,11 +19,13 @@
 **Disclaimer** This Notebook is rather a exploratory approach rather than a explainatory one.
 ## Exploring the data 📊
 
-Using R, let us start by loading the data :
+Using R, let us start by loading the data and the needed libraries :
 ```r
+library(corrplot)
+library(ggplot2)
 data <- read.csv("https://raw.githubusercontent.com/CarlHatoum/Spotify-TOP-50-songs/master/top50.csv")
 ```
-Then, we select only the numerical variables (e.g, removing the track name, artist, and the genre).
+Then, we create a new dataset that contains only the numerical variables (e.g, removing the track name, artist, and the genre).
 ```r
 filtered_data = data[,c(5:14)]
 ```
@@ -63,7 +65,6 @@ We can clearly see a relatively high correlation between Loudness and Energy (0.
 Since we see there is a correlation between some variables, let us plot them, and highlight the genre of each song :
 
 ```r
-library(ggplot2)
 head(data)
 ggplot(data, aes(x=Energy, y=Loudness..dB.., color=Genre))+geom_point()
 ggplot(data, aes(x=Beats.Per.Minute, y=Speechiness., color=Genre))+geom_point()
