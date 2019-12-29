@@ -28,15 +28,13 @@ Then, we select only the numerical variables (e.g, removing the track name, arti
 filtered_data = data[,c(5:14)]
 ```
 ### Numerical variables histograms
-Let us display the distribution of each numerical variables with histogram :
+Let us plot the distribution of each numerical variables with histograms :
 ```r
  filtered_data <- filtered_data %>%
 +   gather(key="text", value="value") %>%
 +   mutate(text = gsub("\\.", " ",text)) %>%
 +   mutate(value = round(as.numeric(value),0))
-```
-Plotting :
-```r
+
 p <- filtered_data %>%
 mutate(text = fct_reorder(text, value)) %>%
 ggplot( aes(x=value, color=text, fill=text)) +
