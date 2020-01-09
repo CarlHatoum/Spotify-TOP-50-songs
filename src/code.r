@@ -38,12 +38,12 @@ xlab("") +
 ylab("") +
 facet_wrap(~text)
 
-# Plotting correlation matrix
+# Plot correlation matrix
 
 mtCor <- cor(filtered_data)
 corrplot(mtCor, method = "number", type = "upper")
 
-# Plotting two pairs of correlated variables
+# Plot the two pairs of most correlated variables
 
 head(data)
 ggplot(data, aes(x=Energy, y=Loudness..dB.., color=Genre))+geom_point()
